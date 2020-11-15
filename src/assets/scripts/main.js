@@ -11,5 +11,5 @@
  */
 
 +( function() {
-  console.log('Hello, UOC!');
+
 } )();
