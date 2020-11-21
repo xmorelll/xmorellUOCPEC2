@@ -68,33 +68,113 @@ a:hover {
 //============================//
 
 .grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
 }
+
 .grid-item {
-  background-color: rgba(255, 255, 255, 0.8);
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  font-size: 30px;
-  text-align: center;
-  position: relative;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 4px;
+}
+
+@supports (display: grid) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 20px;
+    grid-auto-flow: dense;
+    flex-wrap: unset;
+    overflow: unset;
+    align-items: unset;
+    justify-content: unset;
+  }
+
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    font-size: 30px;
+    text-align: center;
+    position: relative;
+    padding: unset;
+    width: unset;
+    display: unset;
+    flex-direction: unset;
+  }
+
+  .grid-item__info {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    color: white;
+  }
+
+  .grid-item__info--grey {
+    background-color: rgba(0,0,0,0.8);
+
+  }
+
+  .grid-item:hover .grid-item__info--hovershow {
+    display: block;
+  }
+
+  .grid-item__info--middletext {
+    bottom: 0;
+  }
+
+  @media screen and (min-width: 520px) {
+    .grid-item--double {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+  }
+}
+
+.grid-item__info--hovershow {
+  display: none;
 }
 
 .grid-item__image {
   width: 100%;
 }
 
-.grid-item__info {
-  background-color: rgba(0,0,0,0.8);
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  //display: none;
-  color: white;
+
+
+
+  //============================//
+// FLEX CSS BANDS Page
+//============================//
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
 }
 
-.grid-item:hover .grid-item__info--hovershow {
-  display: block;
+.flex-container--column {
+  flex-direction: column;
+}
+
+.flex-item {
+  width: 200px;
+}
+
+.flex-item__image {
+  width: 100%;
+}
+
+.flex-item--bordered {
+  background-color: white;
+  border: 2px solid black;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
