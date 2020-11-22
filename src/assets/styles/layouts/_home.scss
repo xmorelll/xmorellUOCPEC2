@@ -145,8 +145,7 @@ a:hover {
 
 
 
-
-  //============================//
+//============================//
 // FLEX CSS BANDS Page
 //============================//
 
@@ -178,3 +177,63 @@ a:hover {
   border-radius: 5px;
 }
 
+
+//============================//
+// BLOG Page
+//============================//
+
+.blob__image--header {
+  width: 100%;
+}
+
+
+
+.famous-list {
+  padding-left: 32px
+}
+
+.famous-list li{
+  list-style: none;
+}
+
+.famous-list__person::before{
+  content: '';
+  display: inline-block;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-size: 32px;
+}
+
+.famous-list__person--benedict::before{
+  background-image: url('./../images/benedict.jpg');
+}
+
+
+.famous-list__person--pierre::before{
+  background-image: url('./../images/pierreoriola.jpeg');
+}
+
+.famous-list__person--nia::before{
+  background-image: url('./../images/nia.jpg');
+}
+
+blockquote {
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+}
+
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote p {
+  display: inline;
+}
