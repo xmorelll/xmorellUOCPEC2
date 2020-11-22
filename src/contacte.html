@@ -5,17 +5,20 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, user-scalable=no">
         <title>LlavaRock. Festival de música</title>
-        <meta name="description" content="Xavier Morell Llorens, Curriculum Vitae (CV).">
-        <meta name="keywords" content="Sant andreu de Llavaneres, music, musica, festival">
+        <meta name="description" content="Festival de música per la festa major de Sant Andreu de Llavaneres. Comentaris i millores per part del poble. Dona la teva opinió.">
+        <meta name="keywords" content="Sant andreu de Llavaneres, music, musica, festival, festa major, contacte, opinio, millores">
         <link rel="icon" type="image/png" href="assets/images/favicon.ico"/>
         <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
 
     </head>
     <body>
-        <header class="row info-row px-3 py-2">
+        <header class="row info-row mx-0 px-3 py-2">
             <a class="col-auto logo" href="/">
                 <img src="assets/images/escut_llavaneres.png" alt="Sant Andreu de Llavaneres" class="logo__img" title="Escut Sant Andreu de Llavaneres">
             </a>
+            <span class="col-auto d-none d-sm-block">
+                <span class="align-middle info-row__text">Sant Andreu de Llavaneres</span>
+            </span>
             <div class="col px-0"></div>
             <a class="col-auto info-row__link" href="grups.html">
                 <span class="align-middle info-row__text">Grups</span>
@@ -27,25 +30,79 @@
                 <span class="align-middle info-row__text">Contacte</span>
             </a>
         </header>
-        <div class="body">
-            <div>
-                hola
-                <i class="fas fa-envelope"></i>
-                adios
-            </div>
+        <div class="body mx-4 my-3">
+            <p class="text-justify">
+                Ajuda'ns a millorar la festa. Digues la teva amb el següent formulari, opinions, millores, propostes...
+                Això ens ajudarà a fer la festa major de Sant Andreu de Llavaneres millor i més pròxima al poble de Sant Andreeu de Llavaneres.
+            </p>
+            <form>
+                <div class="row">
+                    <div class="form-group col-12 col-sm-6">
+                        <label for="exampleFormControlInput1">Nom:</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Joan">
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <label for="exampleFormControlInput2">Cognoms:</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput2" placeholder="Perez Perez">
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <label for="exampleFormControlInput3">Edat:</label>
+                        <input type="number" class="form-control" id="exampleFormControlInput3" placeholder="26">
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <label for="exampleFormControlInput4">Correu electrònic:</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput4" placeholder="name@example.com">
+                    </div>
+                    <div class="form-group col-12 col-sm-6">
+                        <label for="exampleFormControlInput5">Telèfon:</label>
+                        <input type="tel" class="form-control" id="exampleFormControlInput5" placeholder="634412163">
+                    </div>
+                    <div class="form-group col-12">
+                        <label for="exampleFormControlTextarea1">Comentaris:</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="col-12">
+                        <label>Quins dies assistiràs a la festa major:</label>
+                        <br/>
+                        <div class="row mx-0">
+                            <div class="form-check form-check-inline col-12 col-sm-auto">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">27 Divendres</label>
+                            </div>
+                            <div class="form-check form-check-inline col-12 col-sm-auto">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                <label class="form-check-label" for="inlineCheckbox2">28 Dissabte</label>
+                            </div>
+                            <div class="form-check form-check-inline col-12 col-sm-auto">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                                <label class="form-check-label" for="inlineCheckbox3">29 Diumenge</label>
+                            </div>
+                            <div class="form-check form-check-inline col-12 col-sm-auto">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="option4">
+                                <label class="form-check-label" for="inlineCheckbox4">30 Dilluns</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="form-group row flex-row-reverse">
+                    <div class="col-auto">
+                        <button type="submit" class="btn btn-primary">Sign in</button>
+                    </div>
+                </div>
+            </form>
         </div>
         <footer>
             <div class="footer border-bottom border-white">
                 <div class="row mx-2 mb-2">
                     <div class="col-auto mx-auto text-center">
                         Disfruta del festival a Sant Andreu de llavaneres.
-                        <a href="https://goo.gl/maps/kMkjYZH95a5deMnXA">
+                        <a href="https://goo.gl/maps/kMkjYZH95a5deMnXA" target="_blank">
                             <i class="fas fa-map-marker-alt"></i>
                         </a>
                     </div>
                 </div>
-                <div class="row mb-2">
+                <div class="row mx-0 mb-2">
                     <div class="col-md text-center">
                         <i class="fas fa-phone pr-1"></i>937023600
                     </div>
@@ -53,11 +110,11 @@
                         <i class="fas fa-envelope pr-1"></i>ajuntament@llavaneres.cat
                     </div>
                     <div class="col-md text-center">
-                        <i class="fas fa-calendar-alt pr-1"></i>28-30 Novembre
+                        <i class="fas fa-calendar-alt pr-1"></i>27-30 Novembre
                     </div>
                 </div>
             </div>
-            <div class="row px-3 py-1 info-row">
+            <div class="row mx-0 px-3 py-1 info-row">
                 <div class="col-auto logo order-0">
                     <img src="assets/images/escut_llavaneres.png" alt="Sant Andreu de Llavaneres" class="logo__img" title="Escut Sant Andreu de Llavaneres">
                 </div>
