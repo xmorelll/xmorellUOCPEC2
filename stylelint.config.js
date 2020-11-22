@@ -19,7 +19,9 @@ module.exports = {
                     "responsive",
                     "variants",
                     "screen",
-                    "use"
+                    "use",
+                    "function",
+                    "return"
                 ]
             }
         ]
