@@ -1,27 +1,31 @@
+@function invert($color, $amount: 100%) {
+  $inverse: change-color($color, $hue: hue($color) + 180);
+  @return mix($inverse, $color, $amount);
+}
+
 body {
-  margin: 0;
   font-family: $font-family-sans-serif;
   background-color: $llava-bg;
 }
 
-header, footer {
+header,
+footer {
   background-color: $llava-corporate;
   color: white;
 }
 
 a {
   text-decoration: none;
-  color: white
+  color: white;
 }
 
 a:hover {
   text-decoration: none;
-  color: white
+  color: white;
 }
 
 .body {
   max-width: 1264px;
-  margin: auto;
 }
 
 //============================//
@@ -52,16 +56,15 @@ a:hover {
   color: white;
 }
 
-.info-row__link:hover .info-row__text{
+.info-row__link:hover .info-row__text {
   color: white;
   border-bottom: #ffd199 solid 4px;
 }
 
 .info-row__link--selected .info-row__text,
-.info-row__link--selected:hover .info-row__text{
+.info-row__link--selected:hover .info-row__text {
   border-bottom: darkorange solid 4px;
 }
-
 
 //============================//
 // GRID CSS Home Page
@@ -115,8 +118,7 @@ a:hover {
   }
 
   .grid-item__info--grey {
-    background-color: rgba(0,0,0,0.8);
-
+    background-color: rgba(0, 0, 0, 0.8);
   }
 
   .grid-item:hover .grid-item__info--hovershow {
@@ -143,8 +145,6 @@ a:hover {
   width: 100%;
 }
 
-
-
 //============================//
 // FLEX CSS BANDS Page
 //============================//
@@ -170,13 +170,12 @@ a:hover {
 }
 
 .flex-item--bordered {
-  background-color: white;
+  background-color: invert($llava-bg);
   border: 2px solid black;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
-
 
 //============================//
 // BLOG Page
@@ -186,45 +185,52 @@ a:hover {
   width: 100%;
 }
 
+.blob__image__container--footer {
+  width: 100%;
+  max-width: 800px;
+}
+
+.blob__image--footer {
+  width: 100%;
+}
 
 .famous-list {
   padding-left: 32px;
-}
 
-.famous-list li{
-  list-style: none;
-}
+  li {
+    list-style: none;
+  }
 
-.famous-list__person::before{
-  content: '';
-  display: inline-block;
-  height: 32px;
-  width: 32px;
-  border-radius: 50%;
-  background-size: 32px;
-}
+  .famous-list__person::before {
+    content: '';
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+    background-size: 32px;
+  }
 
-.famous-list__person--benedict::before{
-  background-image: url('./../images/benedict.jpg');
-}
+  .famous-list__person--benedict::before {
+    background-image: url('./../images/benedict.jpg');
+  }
 
+  .famous-list__person--pierre::before {
+    background-image: url('./../images/pierreoriola.jpeg');
+  }
 
-.famous-list__person--pierre::before{
-  background-image: url('./../images/pierreoriola.jpeg');
-}
-
-.famous-list__person--nia::before{
-  background-image: url('./../images/nia.jpg');
+  .famous-list__person--nia::before {
+    background-image: url('./../images/nia.jpg');
+  }
 }
 
 blockquote {
-  background: #f9f9f9;
+  background-color: invert($llava-bg, 80%);
   border-left: 10px solid #ccc;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
 }
 
-blockquote:before {
+blockquote::before {
   color: #ccc;
   content: open-quote;
   font-size: 4em;

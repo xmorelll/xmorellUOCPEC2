@@ -1,6 +1,5 @@
 @use "sass:color";
 $font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-
 $llava-corporate: #000078;
 $llava-bg: color.scale($llava-corporate, $lightness: 95%);
